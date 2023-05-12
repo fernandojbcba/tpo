@@ -247,7 +247,8 @@ background: linear-gradient(0deg, rgba(0,212,255,1) 0%, rgba(247,247,250,1) 51%,
 	z-index: 10;
 	-webkit-border-radius: 20px;
 	border-radius: 20px;
-    width: 25vw; height: 360px;
+    width: 25vw;
+    height: 360px;
     margin: 10px;
 }
 
@@ -584,7 +585,7 @@ background: linear-gradient(0deg, rgba(0,212,255,1) 0%, rgba(247,247,250,1) 51%,
 
     aside {
         position: fixed;
-        z-index: 9;
+        z-index: 15;
         background-color: var(--clr-main);
         left: 0;
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .75);
@@ -651,8 +652,16 @@ background: linear-gradient(0deg, rgba(0,212,255,1) 0%, rgba(247,247,250,1) 51%,
     .carrito-producto-subtotal {
         display: none;
     }
+.index__frames{
+    flex-direction: column;
+}
 
+.div-round {
 
+    width: 80vw;
+    height: 200px;
+    margin: 10px;
+}
     .carrito-acciones {
         flex-wrap: wrap;
         row-gap: 1rem;
