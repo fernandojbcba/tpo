@@ -65,5 +65,5 @@ anchoPage();
 }
 
 function redireccion () {
-    location.href = "pagina.html";
+    location.href = "tienda.html";
 }
