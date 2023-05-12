@@ -1,5 +1,5 @@
 const inputs = document.querySelectorAll('input');
-let enviaForm = document.getElementsByClassName("formulario");
+let enviaForm = document.getElementById("formsubmit");
 
 inputs.forEach( (input) => {
     input.addEventListener('blur', (input) => {
@@ -54,9 +54,12 @@ function mostrarMensajeDeError(tipoDeInput, input) {
     });
     return mensaje;
 }
+console.log(enviaForm )
+
 enviaForm.addEventListener("submit", (e) => {
     e.preventDefault();
   envioConcluido();
+  enviaForm.reset()
    
   });
 function envioConcluido (){
