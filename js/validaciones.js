@@ -1,4 +1,5 @@
 const inputs = document.querySelectorAll('input');
+let enviaForm = document.getElementsByClassName("formulario");
 
 inputs.forEach( (input) => {
     input.addEventListener('blur', (input) => {
@@ -53,5 +54,30 @@ function mostrarMensajeDeError(tipoDeInput, input) {
     });
     return mensaje;
 }
-
+enviaForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+  envioConcluido();
+   
+  });
+function envioConcluido (){
+    Toastify({
+        text: "mensaje enviado",
+        duration: 3000,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "center", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: "linear-gradient(to right, #4b33a8, #785ce9)",
+          borderRadius: "2rem",
+          textTransform: "uppercase",
+          fontSize: ".75rem"
+        },
+        offset: {
+            x: '2rem', // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+            y: '2rem' // vertical axis - can be a number or a string indicating unity. eg: '2em'
+          },
+        onClick: function(){} // Callback after click
+      }).showToast()
+}
 
