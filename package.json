@@ -1,0 +1,25 @@
+{
+  "name": "tpo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "node": "^20.1.0",
+    "node-bin-setup": "^1.1.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fernandojbcba/tpo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fernandojbcba/tpo/issues"
+  },
+  "homepage": "https://github.com/fernandojbcba/tpo#readme"
+}

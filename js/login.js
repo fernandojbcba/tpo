@@ -64,6 +64,61 @@ anchoPage();
         }
 }
 
-function redireccion () {
-    location.href = "tienda.html";
+
+const form = document.querySelector('[data-login]')
+
+form.addEventListener('submit', (evento) => {
+    evento.preventDefault()
+
+    const inputEmail = document.querySelector('[data-email]').value
+    const inputPassword = document.querySelector('[data-pass]').value
+
+    
+    fetch("./js/usuarios.json")
+    .then(response => response.json())
+            .then((data) => {
+            console.log(data);
+            let userFound = false
+            let nombresesion = ""
+            data.forEach(({ email, nombre, password}) => {
+                console.log(nombre);
+                console.log(email);
+                console.log(password);
+                console.log(inputEmail);
+                console.log(inputPassword);
+
+                if (email == inputEmail && password == inputPassword) {
+                    console.log("usuario ok")
+                    userFound = true;
+                    nombresesion = nombre;
+                    return
+                }
+            })
+            if (userFound) {
+                console.log("usuario ok")
+                localStorage.setItem('email', inputEmail)
+                localStorage.setItem('nombrex', nombresesion)
+                window.location.assign(`../tienda.html`)
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Correo y/o contraseña incorrecta!',
+                })
+            }
+        })
+        .catch((error) => console.error('Ocurrio un error', error))
+    form.reset()
+    location.href=("../tienda.html")
+
+})
+function userLoggedIn() {
+    const userEmail = localStorage.getItem("email");
+    return userEmail != null;
+}
+
+function userLogout() {
+    localStorage.removeItem("email");
+    localStorage.removeItem("nombrex")
+    window.location.reload();
 }
