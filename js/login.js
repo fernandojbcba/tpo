@@ -112,13 +112,4 @@ form.addEventListener('submit', (evento) => {
     location.href=("../tienda.html")
 
 })
-function userLoggedIn() {
-    const userEmail = localStorage.getItem("email");
-    return userEmail != null;
-}
 
-function userLogout() {
-    localStorage.removeItem("email");
-    localStorage.removeItem("nombrex")
-    window.location.reload();
-}
