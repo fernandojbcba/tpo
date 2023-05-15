@@ -43,7 +43,61 @@ ul {
 a {
     text-decoration: none;
 }
+fieldset, form, label {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+input {
+	border: none;
+	color: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	font-family: inherit;
+}
 
+
+.header_full{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.loggin{
+    height: 100px;
+    width: 200px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+
+
+   
+}
+.header__container__login {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    width: 40%;
+    height: 40px;
+
+}
+
+.header__container__login button {
+    padding: 0.5rem 3rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+}
+
+.header__container__login button a {
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--primary-color);
+}  
 .wrapper {
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -185,7 +239,7 @@ main {
     border-radius: 1rem;
     height: 400px;
     width: 400px;
-    object-fit: cover;
+    object-fit:cover;
 }
 
 .producto-detalles {
@@ -563,20 +617,46 @@ background: linear-gradient(0deg, rgba(0,212,255,1) 0%, rgba(247,247,250,1) 51%,
 
 
 /*** MEDIA QUERIES ***/
+@media screen and (max-width: 1200px) {
+    
+    .producto-imagen {
+    
+        height: 300px;
+        width: 400px;
+@media screen and (max-width: 1000px) {
+    
+    .producto-imagen {
+    
+        height: 200px;
+        width: 400px;
+}
 @media screen and (max-width: 850px) {
     .contenedor-productos {
         grid-template-columns: 1fr 1fr 1fr;
+
     }
+    .producto-imagen {
+    
+        height: 200px;
+        width: 400px;
 }
 
-@media screen and (max-width: 675px) {
-    .contenedor-productos {
-        grid-template-columns: 1fr 1fr;
-    }
-}
 
 @media screen and (max-width: 600px) {
+    .loggin_mobile{
+        display: flex;
+        align-items: center;
+    }
+    #login_btn{ 
+        padding: 8px;
 
+    }
+    .header__container__login{
+       padding: 20;
+    }
+    .header__container__nombre{
+        font-size: 16px;
+    }
     .wrapper {
         min-height: 100vh;
         display: flex;
@@ -671,8 +751,23 @@ background: linear-gradient(0deg, rgba(0,212,255,1) 0%, rgba(247,247,250,1) 51%,
 }
 
 @media screen and (max-width: 400px) {
+    
     .contenedor-productos {
         grid-template-columns: 1fr;
+    }
+    .loggin_mobile{
+        display: flex;
+        align-items: center;
+    }
+    #login_btn{ 
+        padding: 6px;
+
+    }
+    .header__container__login{
+       padding: 0;
+    }
+    .header__container__nombre{
+        font-size: 10px;
     }
 }
 

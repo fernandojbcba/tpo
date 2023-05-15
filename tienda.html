@@ -1,75 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/remerita.png" type="image/x-icon"> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/remerita.png" type="image/x-icon" />
     <title>Remerashop</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
     <div class="wrapper">
-        <header class="header-mobile">
-            <div class="logo"></div>
-            <button class="open-menu" id="open-menu">
-                <i class="bi bi-list"></i>
-            </button>
+      <header class="header-mobile">
+        <div class="logo"></div>
+        <div class="loggin_mobile">
+          <div class="header__container__login" data-headerlogin></div>
+          <div class="header__container__nombre" data-headerNombre></div>
+        </div>
+        <button class="open-menu" id="open-menu">
+          <i class="bi bi-list"></i>
+        </button>
+      </header>
+      <aside>
+        <button class="close-menu" id="close-menu">
+          <i class="bi bi-x"></i>
+        </button>
+        <header class="header_full">
+          <div class="logo"></div>
+          <div class="loggin">
+            <div class="header__container__login" data-headerlogin1></div>
+            <div class="header__container__nombre" data-headerNombre1></div>
+          </div>
         </header>
-        <aside>
-            <button class="close-menu" id="close-menu">
-                <i class="bi bi-x"></i>
-            </button>
-            <header>
-                <div class="logo"></div>
-            </header>
-            <nav>
-                <ul class="menu">
-                    <li>
-                        <button id="todos" class="boton-menu boton-categoria active"><i class="bi bi-caret-right-fill"></i>Todos los productos</button>
-                    </li>
-                    <li>
-                        <button id="pelotas" class="boton-menu boton-categoria"><i class="bi bi-caret-right"></i>Pelotas</button>
-                    </li>
-                    <li>
-                        <button id="remeras" class="boton-menu boton-categoria"><i class="bi bi-caret-right"></i>Remeras</button>
-                    </li>
-                    <li>
-                        <button id="accesorios" class="boton-menu boton-categoria"><i class="bi bi-caret-right"></i>Accesorios</button>
-                    </li>
-                    <li>
-                        <a class="boton-menu boton-carrito" href="carrito.html">
-                            <i class="bi bi-cart-fill"></i>Carrito <span id="numerito" class="numerito">0</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="boton-menu boton-categoria" href="contacto.html">
-                            <i class="bi bi-envelope-at"></i>Contacto
-                        </a>
-                    </li>
-                    <li>
-                        <a class="boton-menu boton-carrito" href="login.html">
-                            <i class="bi bi-x-square-fill"></i>Cerrar sesión 
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <footer>
-                <p class="texto-footer">© 2023 Remerashop</p>
-            </footer>
-        </aside>
-        <main>
-            <h2 class="titulo-principal" id="titulo-principal">Todos los produtos</h2>
-            <div id="contenedor-productos" class="contenedor-productos">
-               <!-- Esto se rellena con js  -->
-            </div>
-        </main>
+        <nav>
+          <ul class="menu">
+            <li>
+              <button id="todos" class="boton-menu boton-categoria active">
+                <i class="bi bi-caret-right-fill"></i>Todos los productos
+              </button>
+            </li>
+            <li>
+              <button id="pelotas" class="boton-menu boton-categoria">
+                <i class="bi bi-caret-right"></i>Pelotas
+              </button>
+            </li>
+            <li>
+              <button id="remeras" class="boton-menu boton-categoria">
+                <i class="bi bi-caret-right"></i>Remeras
+              </button>
+            </li>
+            <li>
+              <button id="accesorios" class="boton-menu boton-categoria">
+                <i class="bi bi-caret-right"></i>Accesorios
+              </button>
+            </li>
+            <li>
+              <a class="boton-menu boton-carrito" href="carrito.html">
+                <i class="bi bi-cart-fill"></i>Carrito
+                <span id="numerito" class="numerito">0</span>
+              </a>
+            </li>
+            <li>
+              <a class="boton-menu boton-categoria" href="contacto.html">
+                <i class="bi bi-envelope-at"></i>Contacto
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <footer>
+          <p class="texto-footer">© 2023 Remerashop</p>
+        </footer>
+      </aside>
+      <main>
+        <h2 class="titulo-principal" id="titulo-principal">
+          Todos los produtos
+        </h2>
+        <div id="contenedor-productos" class="contenedor-productos">
+          <!-- Esto se rellena con js  -->
+        </div>
+      </main>
     </div>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
     <script src="js/main.js"></script>
     <script src="js/menu.js"></script>
-</body>
+    <script type="module" src="./js/controlSesion.js"></script>
+  </body>
 </html>

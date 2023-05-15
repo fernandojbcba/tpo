@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="img/remerita.png" type="image/x-icon" />
     <title>Remerashop</title>
-    <link rel="stylesheet" href="css/reset.css">
+
     <link rel="stylesheet" href="css/styles.css" />
     <link
       rel="stylesheet"
@@ -22,6 +22,10 @@
     <div class="wrapper">
       <header class="header-mobile">
         <div class="logo"></div>
+        <div class="loggin_mobile">
+          <div class="header__container__login" data-headerlogin></div>
+          <div class="header__container__nombre" data-headerNombre></div>
+        </div>
         <button class="open-menu" id="open-menu">
           <i class="bi bi-list"></i>
         </button>
@@ -30,19 +34,18 @@
         <button class="close-menu" id="close-menu">
           <i class="bi bi-x"></i>
         </button>
-        <header>
+        <header class="header_full">
           <div class="logo"></div>
+          <div class="loggin">
+            <div class="header__container__login" data-headerlogin1></div>
+            <div class="header__container__nombre" data-headerNombre1></div>
+          </div>
         </header>
         <nav>
           <ul class="menu">
             <li>
               <a class="boton-menu boton-volver" href="tienda.html">
                 <i class="bi bi-arrow-return-left"></i>Seguir comprando
-              </a>
-            </li>
-            <li>
-              <a class="boton-menu boton-carrito" href="login.html">
-                <i class="bi bi-x-square-fill"></i>Cerrar sesión
               </a>
             </li>
           </ul>
@@ -55,7 +58,8 @@
         <div>
           <section class="contacto">
             <h2 class="contacto__title">Contactanos!</h2>
-            <form id="formsubmit"
+            <form
+              id="formsubmit"
               action=""
               class="formulario flex flex--column"
             >
@@ -104,9 +108,7 @@
                     minlength="30"
                     data-tipo="Comentario"
                   />
-                  <label class="input-label" for="Comentario"
-                    >Comentario</label
-                  >
+                  <label class="input-label" for="Comentario">Comentario</label>
                   <span class="input-message-error"
                     >Este campo no es valido</span
                   >
