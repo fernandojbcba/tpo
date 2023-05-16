@@ -3,60 +3,42 @@
     "id": "pelota-01",
     "titulo": "Pelota juntos",
     "imagen": "./img/pelotas/1.jpg",
-    "categoria": {
-      "nombre": "Pelotas",
-      "id": "pelotas"
-    },
+    "categoria": "pelotas",
     "precio": 32000
   },
   {
     "id": "pelota-02",
     "titulo": "Pelota mini",
     "imagen": "./img/pelotas/2.jpg",
-    "categoria": {
-      "nombre": "Pelotas",
-      "id": "pelotas"
-    },
+    "categoria": "pelotas",
     "precio": 16000
   },
   {
     "id": "pelota-03",
     "titulo": "Pelota Liga",
     "imagen": "./img/pelotas/3.jpg",
-    "categoria": {
-      "nombre": "Pelotas",
-      "id": "pelotas"
-    },
+    "categoria": "pelotas",
     "precio": 42000
   },
   {
     "id": "pelota-04",
     "titulo": "Pelota Campeonato",
     "imagen": "./img/pelotas/4.jpg",
-    "categoria": {
-      "nombre": "Pelotas",
-      "id": "pelotas"
-    },
+    "categoria": "pelotas",
     "precio": 52000
   },
   {
     "id": "pelota-05",
     "titulo": "Pelota Salon",
     "imagen": "./img/pelotas/5.jpg",
-    "categoria": {
-      "nombre": "Pelotas",
-      "id": "pelotas"
-    },
+    "categoria": "pelotas",
     "precio": 27000
   },
   {
     "id": "pelota-06",
     "titulo": "pelota Estrella",
     "imagen": "./img/pelotas/6.jpg",
-    "categoria": {
-      "nombre": "Pelotas",
-      "id": "pelotas"
-    },
+    "categoria": "pelotas",
     "precio": 35000
   },
 
@@ -64,60 +46,42 @@
     "id": "remera-01",
     "titulo": "remera Argentina 3*",
     "imagen": "./img/remeras/1.jpg",
-    "categoria": {
-      "nombre": "Remeras",
-      "id": "remeras"
-    },
+    "categoria": "remeras",
     "precio": 60000
   },
   {
     "id": "remera-02",
     "titulo": "remera Boca juniors",
     "imagen": "./img/remeras/2.jpg",
-    "categoria": {
-      "nombre": "Remeras",
-      "id": "remeras"
-    },
+    "categoria": "remeras",
     "precio": 30000
   },
   {
     "id": "remera-03",
     "titulo": "remera Argentina Retro",
     "imagen": "./img/remeras/3.jpg",
-    "categoria": {
-      "nombre": "Remeras",
-      "id": "remeras"
-    },
+    "categoria": "remeras",
     "precio": 22000
   },
   {
     "id": "remera-04",
     "titulo": "remera Argentina entrenamiento",
     "imagen": "./img/remeras/4.jpg",
-    "categoria": {
-      "nombre": "Remeras",
-      "id": "remeras"
-    },
+    "categoria": "remeras",
     "precio": 21
   },
   {
     "id": "remera-05",
     "titulo": "remera Belgrano",
     "imagen": "./img/remeras/5.jpg",
-    "categoria": {
-      "nombre": "Remeras",
-      "id": "remeras"
-    },
+    "categoria": "remeras",
     "precio": 30000
   },
   {
     "id": "remera-06",
     "titulo": "remera river",
     "imagen": "./img/remeras/6.jpg",
-    "categoria": {
-      "nombre": "Remeras",
-      "id": "remeras"
-    },
+    "categoria": "remeras",
     "precio": 30000
   },
 
@@ -125,40 +89,28 @@
     "id": "accesorio-01",
     "titulo": "canillera colores",
     "imagen": "./img/accesorios/1.jpg",
-    "categoria": {
-      "nombre": "Accesorios",
-      "id": "accesorios"
-    },
+    "categoria": "accesorios",
     "precio": 10000
   },
   {
     "id": "accesorio-02",
     "titulo": "canillera negra",
     "imagen": "./img/accesorios/2.jpg",
-    "categoria": {
-      "nombre": "Accesorios",
-      "id": "accesorios"
-    },
+    "categoria": "accesorios",
     "precio": 10000
   },
   {
     "id": "accesorio-03",
     "titulo": "gorra",
     "imagen": "./img/accesorios/3.jpg",
-    "categoria": {
-      "nombre": "Accesorios",
-      "id": "accesorios"
-    },
+    "categoria": "accesorios",
     "precio": 15000
   },
   {
     "id": "accesorio-04",
     "titulo": "guante arquero",
     "imagen": "./img/accesorios/4.jpg",
-    "categoria": {
-      "nombre": "Accesorios",
-      "id": "accesorios"
-    },
+    "categoria": "accesorios",
     "precio": 30000
   }
 ]

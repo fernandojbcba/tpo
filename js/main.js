@@ -1,6 +1,6 @@
 let productos = [];
 
-fetch(" https://sheetdb.io/api/v1/9m7rmv3iu3009")
+fetch("https://sheetdb.io/api/v1/ewqetxwajgi31")
   .then((response) => response.json())
   .then((data) => {
     productos = data;
@@ -46,12 +46,14 @@ botonesCategorias.forEach((boton) => {
     e.currentTarget.classList.add("active");
 
     if (e.currentTarget.id != "todos") {
+     
       const productoCategoria = productos.find(
-        (producto) => producto.categoria.id === e.currentTarget.id
+        (producto) => producto.categoria === e.currentTarget.id
       );
+      
       tituloPrincipal.innerText = productoCategoria.categoria.nombre;
       const productosBoton = productos.filter(
-        (producto) => producto.categoria.id === e.currentTarget.id
+        (producto) => producto.categoria === e.currentTarget.id
       );
       cargarProductos(productosBoton);
     } else {
