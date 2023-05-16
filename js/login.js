@@ -1,4 +1,3 @@
-// Login
 document
   .getElementById("btn__iniciar-sesion")
   .addEventListener("click", iniciarSesion);
@@ -112,3 +111,29 @@ form.addEventListener("submit", (evento) => {
     });
   }
 });
+const CrearUsuario = (nombre, email, password) => {
+  fetch("https://sheetdb.io/api/v1/cjud8afdfsrwi", {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      data: [
+        {
+          nombre: nombre,
+          email: email,
+          password: password,
+          id: uuid.v4(),
+        },
+      ],
+    }),
+  })
+    .then((response) => response.json())
+    .then((data) => console.log(data));
+};
+
+const listarClientes = () =>
+  fetch(`https://sheetdb.io/api/v1/cjud8afdfsrwi`)
+    .then((respuesta) => respuesta.json())
+    .then((data) => console.log(data));

@@ -2,6 +2,7 @@
   {
     "nombre": "Administrador",
     "email": "admin@admin.com",
-    "password": "123abc"
+    "password": "123abc",
+    "id": "001-110"
   }
 ]
