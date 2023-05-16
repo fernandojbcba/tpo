@@ -1,6 +1,6 @@
 let productos = [];
 
-fetch("./js/productos.json")
+fetch(" https://sheetdb.io/api/v1/9m7rmv3iu3009")
   .then((response) => response.json())
   .then((data) => {
     productos = data;
