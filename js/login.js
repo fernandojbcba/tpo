@@ -1,10 +1,10 @@
-// Login
 document
   .getElementById("btn__iniciar-sesion")
   .addEventListener("click", iniciarSesion);
+
 document.getElementById("btn__registrarse").addEventListener("click", register);
 window.addEventListener("resize", anchoPage);
-
+var btnreg = document.getElementsByClassName("btnreg");
 var formulario_login = document.querySelector(".formulario__login");
 var formulario_register = document.querySelector(".formulario__register");
 var contenedor_login_register = document.querySelector(
@@ -52,6 +52,7 @@ function register() {
     formulario_login.style.display = "none";
     caja_trasera_register.style.opacity = "0";
     caja_trasera_login.style.opacity = "1";
+    
   } else {
     formulario_register.style.display = "block";
     contenedor_login_register.style.left = "0px";
@@ -59,25 +60,30 @@ function register() {
     caja_trasera_register.style.display = "none";
     caja_trasera_login.style.display = "block";
     caja_trasera_login.style.opacity = "1";
+    
   }
 }
 
 const form = document.querySelector("[data-login]");
 
 let usuarios = [];
-fetch("./js/usuarios.json")
-  .then((response) => response.json())
-  .then((data) => {
-    console.log(data);
-    usuarios = data;
-  })
 
-  .catch((error) => console.error("Ocurrio un error", error));
 
 form.addEventListener("submit", (evento) => {
   evento.preventDefault();
   let userFound = false;
   let nombresesion = "";
+  const ListarUsuarios = ()=> {
+    fetch("https://sheetdb.io/api/v1/cjud8afdfsrwi")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        usuarios = data;
+      })
+    
+      .catch((error) => console.error("Ocurrio un error", error));
+    }
+    ListarUsuarios();
   const inputEmail = document.querySelector("[data-email]").value;
   const inputPassword = document.querySelector("[data-pass]").value;
   usuarios.forEach(({ email, nombre, password }) => {
@@ -112,3 +118,36 @@ form.addEventListener("submit", (evento) => {
     });
   }
 });
+const formreg = document.querySelector("[data-reg]");
+
+formreg.addEventListener("submit", (evento) => {
+  evento.preventDefault();
+  const inputNombrereg = document.querySelector("[data-nombrereg]").value;
+  const inputEmailreg = document.querySelector("[data-emailreg]").value;
+  const inputPasswordreg = document.querySelector("[data-passreg]").value;
+  CrearUsuario(inputNombrereg, inputEmailreg, inputPasswordreg);
+});
+
+const CrearUsuario = (nombre, email, password) => {
+  fetch("https://sheetdb.io/api/v1/cjud8afdfsrwi", {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      data: [
+        {
+          nombre: nombre,
+          email: email,
+          password: password,
+          id: uuid.v4(),
+        },
+      ],
+    }),
+  })
+    .then((response) => response.json())
+    .then((data) => console.log(data));
+};
+
+

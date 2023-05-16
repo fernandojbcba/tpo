@@ -43,18 +43,23 @@
             <button class="btn" type="submit">Iniciar</button>
           </form>
           <!-- Registro -->
-          <form class="formulario__register" action="">
+          <form class="formulario__register" action="submit" data-reg>
             <h2>Registrarse</h2>
-            <input type="text" placeholder="Nombre completo" />
-            <input type="email" placeholder="Email" />
-            <input type="text" placeholder="Usuario" />
-            <input type="password" placeholder="Contraseña" />
-            <button>Registrarse</button>
+            <input type="text" placeholder="Nombre completo" data-nombrereg />
+            <input type="email" placeholder="Email" data-emailreg/>
+            <input type="password" placeholder="Contraseña" data-passreg />
+            <button class="btn" type="submit">Registrarse</button>
           </form>
         </div>
       </div>
     </main>
     <script src="./js/login.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"
+            integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
   </body>
 </html>
