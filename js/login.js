@@ -120,6 +120,15 @@ formreg.addEventListener("submit", (evento) => {
   const inputEmailreg = document.querySelector("[data-emailreg]").value;
   const inputPasswordreg = document.querySelector("[data-passreg]").value;
   CrearUsuario(inputNombrereg, inputEmailreg, inputPasswordreg);
+  Swal.fire({
+    position: 'top-end',
+    icon: 'success',
+    title: 'registrado con Exito!',
+    showConfirmButton: false,
+    timer: 2000
+  })
+  formreg.reset();
+  iniciarSesion();
 });
 
 const CrearUsuario = (nombre, email, password) => {
