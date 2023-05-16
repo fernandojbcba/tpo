@@ -87,13 +87,7 @@ form.addEventListener("submit", (evento) => {
   const inputEmail = document.querySelector("[data-email]").value;
   const inputPassword = document.querySelector("[data-pass]").value;
   usuarios.forEach(({ email, nombre, password }) => {
-    console.log(nombre);
-    console.log(email);
-    console.log(password);
-    console.log(inputEmail);
-    console.log(inputPassword);
-
-    if (
+        if (
       email == inputEmail &&
       password == inputPassword &&
       (inputEmail != null) & (inputPassword != null)
