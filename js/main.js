@@ -52,7 +52,7 @@ botonesCategorias.forEach((boton) => {
       );
       console.log(productoCategoria)
       console.log(productoCategoria.categoria)
-      tituloPrincipal.innerText = productoCategoria.categoria;
+      tituloPrincipal.innerText = productoCategoria.categoria.toUpperCase();
       const productosBoton = productos.filter(
         (producto) => producto.categoria === e.currentTarget.id
       );
