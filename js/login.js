@@ -73,20 +73,15 @@ form.addEventListener("submit", (evento) => {
   evento.preventDefault();
   let userFound = false;
   let nombresesion = "";
-  const ListarUsuarios = ()=> {
-    fetch("https://sheetdb.io/api/v1/cjud8afdfsrwi")
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        usuarios = data;
-      })
-    
-      .catch((error) => console.error("Ocurrio un error", error));
-    }
-    ListarUsuarios();
-  const inputEmail = document.querySelector("[data-email]").value;
-  const inputPassword = document.querySelector("[data-pass]").value;
-  usuarios.forEach(({ email, nombre, password }) => {
+  const ListarUsuarios = async () => {
+    try {
+      const response = await fetch("https://sheetdb.io/api/v1/cjud8afdfsrwi");
+      const data = await response.json();
+      console.log(data);
+      usuarios = data;
+      const inputEmail = document.querySelector("[data-email]").value;
+      const inputPassword = document.querySelector("[data-pass]").value;
+      usuarios.forEach(({ email, nombre, password }) => {
         if (
       email == inputEmail &&
       password == inputPassword &&
@@ -98,6 +93,7 @@ form.addEventListener("submit", (evento) => {
       return;
     }
   });
+  
   if (userFound) {
     console.log("usuario ok");
     localStorage.setItem("email", inputEmail);
@@ -111,7 +107,13 @@ form.addEventListener("submit", (evento) => {
       text: "Correo y/o contraseña incorrecta!",
     });
   }
+    } catch (error) {
+      console.error("Ocurrió un error", error);
+    }
+  };
+  ListarUsuarios();
 });
+
 const formreg = document.querySelector("[data-reg]");
 
 formreg.addEventListener("submit", (evento) => {

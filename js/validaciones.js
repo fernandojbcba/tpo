@@ -37,7 +37,7 @@ const mensajesDeError = {
   },
   Comentario: {
     valueMissing: "El campo comentario no puede estar vacio",
-    typeMissing: "El correo no es valido",
+    typeMissing: "El comentario no es valido",
   },
 };
 
