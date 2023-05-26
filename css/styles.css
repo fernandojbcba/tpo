@@ -232,11 +232,12 @@ main {
   margin-left: 0;
   border-radius: 2rem;
   padding: 3rem;
+  
 }
-
 .titulo-principal {
   color: var(--clr-main);
   margin-bottom: 2rem;
+  text-align:right;
 }
 
 .contenedor-productos {
@@ -348,7 +349,7 @@ main {
   max-width: 45rem;
   padding: 1.75rem;
   box-sizing: border-box;
-  margin-bottom: 1rem;
+  margin: auto;
 }
 
 .contacto__title {
@@ -357,7 +358,7 @@ main {
 }
 
 .button {
-  display: block;
+  display: inline-block;
   background-color: var(--primary-color);
   border-radius: 7px;
   width: 100%;
@@ -369,6 +370,7 @@ main {
   font-size: var(--font-size-button);
   align-self: center;
   text-align: center;
+  
 }
 
 .simple-button {
@@ -630,6 +632,55 @@ main {
   height: 35px;
 }
 
+#titulo1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  color:rgb(47, 81, 232);
+  box-shadow: rgb(150,150,150) 10px 10px 20px 10px;
+  background: -webkit-linear-gradient(top, #aac6ca, #04a3a915);
+  transition: transform 1s ease-in-out 0s;
+}
+
+#titulo1:hover {transform: rotate(10deg);
+}
+
+#cajapadre {
+  display: flex;
+  flex-direction: column;
+  justify-content:left;
+  align-items: left;
+  gap: 20px;
+  
+  } 
+  
+  #caja-1 {
+  display:flex;
+  text-align: justify;
+  }
+
+  #cajapadre2 {
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap: 20px;
+  }
+  
+  #caja-2 {
+    display:flex;
+    width: 210px;
+    text-align: justify;
+  }
+
+  .img-zoom {
+      transition: transform 0.3s ease;
+  }
+    
+  .img-zoom:hover {
+      transform: scale(1.2);
+  }
+    
 /*** MEDIA QUERIES ***/
 @media screen and (max-width: 1200px) {
   .producto-imagen {
@@ -755,7 +806,15 @@ main {
     flex-wrap: wrap;
     row-gap: 1rem;
   }
+
+  #cajapadre2 {
+    height: auto;
+  }
+
 }
+
+
+
 
 @media screen and (max-width: 400px) {
   .contenedor-productos {

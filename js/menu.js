@@ -11,3 +11,11 @@ openMenu.addEventListener("click", () => {
 closeMenu.addEventListener("click", () => {
   aside.classList.remove("aside-visible");
 });
+
+var elementos = document.getElementsByClassName("logo");
+
+for (var i = 0; i < elementos.length; i++) {
+  elementos[i].addEventListener("click", () => {
+    window.location.href = "index.html";
+  });
+}
