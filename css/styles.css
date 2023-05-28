@@ -287,6 +287,8 @@ main {
   color: var(--clr-white);
 }
 .main_bandera {
+  display:flex;
+  flex-direction: column;
   background: rgb(0, 212, 255);
   background: linear-gradient(
     0deg,
@@ -713,6 +715,18 @@ padding: 10px;
   .producto-imagen {
     height: 200px;
     width: 400px;
+  }
+  #cajapadre2 {
+    height: auto;
+  }
+  .index__frames {
+    flex-direction: column;
+  }
+  .div-round {
+    /* width: 80vw; */
+    width: 400px;
+    height: 200px;
+    margin: 10px;
   }
 }
 @media screen and (max-width: 600px) {
