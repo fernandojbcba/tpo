@@ -2,7 +2,7 @@
   "name": "tpo",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "",
   "dependencies": {
     "node": "^20.1.0",
     "node-bin-setup": "^1.1.3",
