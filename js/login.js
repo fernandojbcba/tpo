@@ -75,7 +75,7 @@ form.addEventListener("submit", (evento) => {
   let nombresesion = "";
   const ListarUsuarios = async () => {
     try {
-      const response = await fetch("https://sheetdb.io/api/v1/xkc58vohznlmm");
+      const response = await fetch("./api/usuarios.json");
       const data = await response.json();
       console.log(data);
       usuarios = data;
